@@ -62,7 +62,7 @@
     "manifest V2",
     "manifest V3"
   ],
-  "author": "Ruben Medina",
+  "author": "Uğur Kellecioğlu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ugurkellecioglu/vite-plugin-web-extension/issues"
