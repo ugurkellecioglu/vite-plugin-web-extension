@@ -107,8 +107,19 @@ export default function webExtension(
 
       try {
         await convertToSafariWebExtension(options.dir, {
-          appName: pluginOptions.manifest.name,
+          appName: pluginOptions.manifest.name + "_x86_64",
           ...(pluginOptions.safari as SafariBuildOptions),
+          architecture: "x86_64",
+        });
+      } catch (error) {
+        this.error(`Could not create Safari build: ${error}`);
+      }
+
+      try {
+        await convertToSafariWebExtension(options.dir, {
+          appName: pluginOptions.manifest.name + "_arm64",
+          ...(pluginOptions.safari as SafariBuildOptions),
+          architecture: "arm64",
         });
       } catch (error) {
         this.error(`Could not create Safari build: ${error}`);

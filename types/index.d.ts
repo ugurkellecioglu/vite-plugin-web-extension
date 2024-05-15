@@ -92,6 +92,8 @@ export interface SafariBuildOptions {
    * Default: false
    */
   objc?: boolean;
+
+  architecture?: "x86_64" | "arm64";
 }
 
 /**

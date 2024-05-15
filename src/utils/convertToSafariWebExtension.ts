@@ -10,6 +10,7 @@ export async function convertToSafariWebExtension(
     appName = "web-extension",
     bundleIdentifier = "",
     objc = false,
+    architecture = "x86_64",
   }: SafariBuildOptions = {}
 ): Promise<void> {
   await new Promise<void>((resolve, reject) => {
@@ -76,6 +77,8 @@ export async function convertToSafariWebExtension(
           `${projectLocation}/${appName}/${appName}.xcodeproj`,
           "-scheme",
           appName,
+          "-arch",
+          architecture,
           "-configuration",
           "Release",
           `SYMROOT=${projectLocation}`,
