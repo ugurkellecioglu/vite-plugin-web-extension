@@ -27,7 +27,7 @@ export async function convertToSafariWebExtension(
 
   const outputPath = dir
     ? `${dist.split("/").slice(0, -1).join("/")}/${dir}`
-    : `${dist}-safari`;
+    : `${dist}-safari-${architecture}`;
 
   const projectLocation = `${os.tmpdir()}/vite-plugin-web-extension-safari-${Date.now()}-${~~(
     Math.random() * 1000000

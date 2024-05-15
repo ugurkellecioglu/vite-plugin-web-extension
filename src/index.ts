@@ -107,7 +107,7 @@ export default function webExtension(
 
       try {
         await convertToSafariWebExtension(options.dir, {
-          appName: pluginOptions.manifest.name + "_x86_64",
+          appName: pluginOptions.manifest.name,
           ...(pluginOptions.safari as SafariBuildOptions),
           architecture: "x86_64",
         });
@@ -117,7 +117,7 @@ export default function webExtension(
 
       try {
         await convertToSafariWebExtension(options.dir, {
-          appName: pluginOptions.manifest.name + "_arm64",
+          appName: pluginOptions.manifest.name,
           ...(pluginOptions.safari as SafariBuildOptions),
           architecture: "arm64",
         });
